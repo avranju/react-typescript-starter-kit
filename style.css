@@ -1,0 +1,47 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.property-editor {
+  background-color: #fff;
+}
+
+.property-editor table {
+  width: 100%;
+}
+
+.property-editor table tr td {
+  padding-left: 3px;
+}
+
+.property-editor table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.property-editor table tr td:hover {
+  background-color: #f5f5f5;
+}
+
+.property-editor table tr td:nth-child(even) {
+  padding-left: 10px;
+}
+
+.property-editor input[type="text"] {
+  width: 100%;
+  border-style: none;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+  background-color: transparent;
+}
+
+.property-editor input[type="text"]:focus {
+  outline-style: none;
+  border-bottom: 1px solid blue;
+}
+
+.property-editor .close-button {
+  color: darkgray;
+  cursor: pointer;
+  text-align: center;
+}
+

@@ -7,6 +7,12 @@
   "installed": {
     "react/react.d.ts": {
       "commit": "c2c22c3b953fe9730d4802022d5e0d18d083909e"
+    },
+    "lodash/lodash.d.ts": {
+      "commit": "6052959591c9bc6f8463c58220965c7030ba934d"
+    },
+    "es6-shim/es6-shim.d.ts": {
+      "commit": "6052959591c9bc6f8463c58220965c7030ba934d"
     }
   }
 }

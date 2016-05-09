@@ -1,16 +1,24 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
-var browserify = require('browserify'); 
+let sourcemaps = require('gulp-sourcemaps');
+var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
 gulp.task('typescript', function () {
   var tsOut = gulp.src('src/**/*')
+    .pipe(sourcemaps.init())
     .pipe(ts({
       noImplicitAny: true,
       jsx: 'react',
       module: 'commonjs'
     }));
-  return tsOut.js.pipe(gulp.dest('build'));
+  return tsOut.js
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest('build'));
+});
+
+gulp.task('watch', () => {
+  gulp.watch('src/**/*', ['default']);
 });
 
 gulp.task('browserify', function() {
